@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> 
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Etch a sketch</h1>
+        <div id="playzone-container">
+            <div id="board-container"></div>
+            <div id="tool-menu">
+                <div id="color-picker" class="tools">
+                    <img src="assets/c-key.png" alt="">
+                    <input id="color" type="color">
+                </div>
+
+                <div id="clear" class="tools">
+                    <img src="assets/r-key.png" alt="">
+                    <p>Clear</p>
+                </div>
+
+                <div class="tools">
+                    <label for="quantity">Rows: </label>
+                    <input id="quantity" name="quantity" type="number" value="16">
+                </div>
+                <div id="help-btn" class="tools">
+                    <img id="help-icon" src="assets/help.svg" alt="">
+                    <p>Help</p>
+                </div>
+            </div>
+        </div>
+        <div id="blocker">
+            <div id="help">
+                <ul>
+                    <li>Click on the drawing surface to start/pause drawing!</li>
+                    <li>Press "R" key or click "clear" tape to clear your board.</li>
+                    <li>Press "C" key or click the first tape to change the color of your pen.</li>
+                    <li>Set the pixels in your board by setting "Rows" option. It has to be between 10 and 100. Then press "Enter" key.</li>
+                </ul>
+                <button id="help-close">Close</button>
+            </div>
+        </div>
+    </main>
+    <footer>By Bryan343</footer>
+</body>
+</html>

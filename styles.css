@@ -1,0 +1,179 @@
+* {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+main {
+    background: url('assets/city-background.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    background: url('assets/tape.png') no-repeat;
+    background-size: 70% 100%;
+    background-position: center;
+    padding: 15px 60px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+#playzone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#board-container {
+    background-color: white;
+    display: grid;
+    width: 60vw;
+    height: 60vw;
+}
+
+.pixel {
+    background: transparent;
+}
+
+#tool-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    background: url('assets/tape.png') no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(-10deg);
+    cursor: pointer;
+}
+
+.tools img {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 10px;
+}
+
+input {
+    width: 50px;
+    height: 20px;
+    background-color: transparent;
+    outline: none;
+}
+
+input[type="color"] {
+    border:1px solid transparent;
+    box-shadow: 0 0 10px #8c7671;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    border:1px solid transparent;
+    box-shadow: 0 0 10px #8c7671;
+    appearance: textfield;
+}
+
+input:focus {
+    border: 1px solid #8c7671;
+}
+
+#blocker {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+#help {
+    background-color: rgba(66, 104, 230, 0.9);
+    color: white;
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+}
+
+#help-icon {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    color: white;
+    text-align: end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(100, 100, 100, 0.9);
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    main {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #playzone-container {
+        flex-direction: column;
+    }
+
+    #board-container {
+        width: 50vw;
+        height: 50vw;
+    }    
+}
+
+@media (min-width: 481px) and (max-width: 768) {
+    #board-container {
+        width: 60vw;
+        height: 60vw;
+    }    
+}
+
+@media (min-width: 769px) {
+    #board-container {
+        width: 30vw;
+        height: 30vw;
+    } 
+
+    h1 {
+        background-size: 40% 100%;
+    }
+
+    #playzone-container {
+        gap: 100px;
+    }
+}
+
